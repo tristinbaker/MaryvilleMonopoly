@@ -21,6 +21,5 @@ public class GameBoard extends JPanel{
 		deeds[0].setLocation(92, 525);
 		add(deeds[0]);
 		
-		
 	}
 }

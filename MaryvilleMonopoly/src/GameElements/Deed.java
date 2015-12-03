@@ -2,6 +2,7 @@ package GameElements;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 
@@ -77,6 +78,20 @@ public class Deed extends Tile {
 		text.setFont(f);
 		text.setLocation(10, 10);
 		add(text, BorderLayout.NORTH);
+		
+		addMouseListener(this);
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
