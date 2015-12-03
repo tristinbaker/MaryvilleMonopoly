@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JPanel;
 
 import Handlers.MyInput;
+import GameElements.GameBoard;
 
 public class GamePanel extends JPanel implements Runnable, KeyListener{
 
@@ -28,11 +29,15 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 	private BufferedImage image;
 	private Graphics2D g;
 	
+	private GameBoard gb = new GameBoard();
+	
 	public GamePanel() {
 		super();
 		setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
 		setFocusable(true);
 		requestFocus(true);
+		setLayout(null);
+		add(gb, 0, 0);
 	}
 	
 	public void addNotify() {
@@ -84,7 +89,6 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 		g = (Graphics2D) image.getGraphics();
 		
 		isRunning = true;
-		
 	}
 	
 	private void update() {
@@ -97,9 +101,9 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 	}
 	
 	private void drawToScreen() {
-		Graphics g2 = getGraphics();
+		/*Graphics g2 = getGraphics();
 		g2.drawImage(image, 0, 0, WIDTH * SCALE, HEIGHT * SCALE, null);
-		g2.dispose();
+		g2.dispose(); */
 	}
 
 	@Override
