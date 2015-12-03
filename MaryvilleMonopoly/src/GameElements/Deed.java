@@ -79,4 +79,6 @@ public class Deed extends Tile {
 		add(text, BorderLayout.NORTH);
 	}
 	
+	
+	
 }
