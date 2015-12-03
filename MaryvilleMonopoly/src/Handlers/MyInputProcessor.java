@@ -3,6 +3,12 @@ package Handlers;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+
+/**
+ * Class to process inputs
+ * @author tristinbaker
+ *
+ */
 public class MyInputProcessor implements KeyListener {
 
 	/**
