@@ -1,5 +1,10 @@
 package Handlers;
 
+/**
+ * Main class for key input.
+ * @author tristinbaker
+ *
+ */
 public class MyInput {
 
 	/**

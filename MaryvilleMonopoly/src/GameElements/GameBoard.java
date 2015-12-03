@@ -25,5 +25,6 @@ public class GameBoard extends JPanel{
 		deeds[0] = new Deed("Anderson Hall", "brown", 60, 30, 30, rentPrices);
 		deeds[0].setLocation(92, 525);
 		add(deeds[0]);
+		
 	}
 }
