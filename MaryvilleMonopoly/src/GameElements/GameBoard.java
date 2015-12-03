@@ -1,5 +1,8 @@
 package GameElements;
 import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 
 import javax.swing.*;
 /**
@@ -8,12 +11,15 @@ import javax.swing.*;
  *
  */
 public class GameBoard extends JPanel{
+	
+	Deed[] deeds;
+	
 	public GameBoard() {
 		setLayout(null);
 		setSize(600,600);
 		setBackground(Color.WHITE);
 		
-		Deed[] deeds = new Deed[22];
+		deeds = new Deed[22];
 		
 		//Anderson Hall deed
 		int[] rentPrices = new int[]{2,4,6,8,10,15};
@@ -22,4 +28,5 @@ public class GameBoard extends JPanel{
 		add(deeds[0]);
 		
 	}
+	
 }

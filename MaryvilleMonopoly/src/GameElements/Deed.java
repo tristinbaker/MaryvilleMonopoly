@@ -1,10 +1,11 @@
 package GameElements;
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 
-import javax.swing.*;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
 
 /**
  * Class to store a deed; deed is being defined as a tile that can be purchased
@@ -71,16 +72,40 @@ public class Deed extends Tile {
 		}
 		numHouses = 0;
 		setSize(46,75);
-		setBackground(Color.RED);
+
+		Color bg = new Color(205,230,208);
+		setBackground(bg);
+		setLayout(null);
+		
+		addMouseListener(this);
+		
+		JPanel colorID = new JPanel();
+		colorID.setLayout(null);
+		
+		Color IDColor = new Color(0,114,187);
+		colorID.setBackground(IDColor);
+		colorID.setSize(46, 15);
+		colorID.setLocation(0, 0);
+		add(colorID);
+		
+		colorID.setBorder(new LineBorder(Color.BLACK));
+		setBorder(new LineBorder(Color.BLACK));
 		
 		JLabel text = new JLabel("Anderson");
 		Font f = new Font("Serif", Font.PLAIN, 11);
+		text.setForeground(Color.BLACK);
 		text.setFont(f);
 		text.setLocation(10, 10);
-		add(text, BorderLayout.NORTH);
+		add(text);
 		
-		addMouseListener(this);
+		JPanel textPanel = new JPanel();
+		textPanel.add(text);
+		textPanel.setSize(44, 59);
+		textPanel.setBackground(bg);
+		textPanel.setLocation(1,15);
+		add(textPanel);
 	}
+	
 
 	@Override
 	public void mouseDragged(MouseEvent e) {
